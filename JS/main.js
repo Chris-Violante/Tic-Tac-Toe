@@ -22,9 +22,9 @@
 
 /*----- constants -----*/
 const colorLookup = {
-    '1': 'black',
-    '-1': 'orange',
-    'null': 'transparent'
+    '1': 'X',
+    '-1': 'O',
+    'null': null
 };
 
 /*----- app's state (variables) -----*/
@@ -63,7 +63,7 @@ function render() {
 
 function renderBoard() {
     board.forEach(function (cell, cellIndx) {
-        cellEls[cellIndx].style.backgroundColor = colorLookup[cell];
+        cellEls[cellIndx].innerHTML = colorLookup[cell];
     });
 };
 
